@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body style="background: #000; color: #0f0; font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0;">
+    <div style="border: 2px solid #333; padding: 30px; border-radius: 20px; text-align: center; background: #111; box-shadow: 0 0 20px rgba(0,255,0,0.2);">
+        <h1 style="color: #fff; margin-top: 0;">STABLE-MINE PRO</h1>
+        <p style="color: #888;">Total Mined (USDT)</p>
+        <div style="font-size: 3em; font-weight: bold; margin: 20px 0;">
+            $<span id="balance">0.000000</span>
+        </div>
+        <div style="color: #555; font-size: 0.9em;">
+            Status: <span style="color: #0f0;">● ACTIVE</span> | Hashrate: 142.8 TH/s
+        </div>
+        <hr style="border: 0; border-top: 1px solid #333; margin: 20px 0;">
+        <p style="font-size: 0.8em; color: #777;">Educational Practice Simulation Only</p>
+    </div>
+
+    <script>
+        let bal = 0.000000;
+        setInterval(() => {
+            bal += 0.000045; 
+            document.getElementById('balance').innerText = bal.toFixed(6);
+        }, 500);
+    </script>
+</body>
+</html>
